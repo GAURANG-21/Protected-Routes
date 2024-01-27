@@ -1,0 +1,22 @@
+*{
+  margin: 0%;
+  padding: 0%;
+}
+
+nav{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.258);
+  background-color: white;
+}
+
+nav a{
+  color: black;
+  padding: 1rem;
+  margin: 0 2vmax;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
