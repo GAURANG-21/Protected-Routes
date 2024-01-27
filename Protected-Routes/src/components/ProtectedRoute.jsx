@@ -1,14 +1,18 @@
-import { Navigate } from "react-router-dom"
+import { Navigate, Outlet } from "react-router-dom"
 import PropTypes from 'prop-types'
 
 const ProtectedRoute = ({isAuthenticated,children}) => {
   if(!isAuthenticated) return <Navigate to={"/login"}/>
-  return children
+  return children?children:<Outlet/>
 }
 
 export default ProtectedRoute
 
 
 ProtectedRoute.propTypes = { 
-    isAuthenticated: PropTypes.bool
+    isAuthenticated: PropTypes.bool,
+    children: PropTypes.any
 }
+
+
+//A component that renders the next match in a set of matches
