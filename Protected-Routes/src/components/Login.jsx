@@ -1,7 +1,10 @@
+import { useDispatch } from "react-redux"
+
 const Login = () => {
+  const dispatch = useDispatch();
   return (
     <div>
-      <button>Login</button>
+      <button onClick={()=>{dispatch({type:"login"})}}>Login</button>
     </div>
   )
 }

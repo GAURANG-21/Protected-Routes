@@ -1,10 +1,13 @@
+import { useDispatch } from "react-redux"
+
 const Profile = () => {
+  const dispatch = useDispatch()
   return (
     <>
     <div>
       Profile
     </div>
-    <button>Login</button>
+    <button onClick={()=>{dispatch({type:"logout"})}}>Logout</button>
     </>
   )
 }

@@ -1,7 +1,10 @@
+import { useDispatch } from "react-redux"
+
 const Logout = () => {
+  const dispatch = useDispatch()
   return (
     <div>
-      <button>Logout</button>
+      <button onClick={()=>{dispatch({type:"logout"})}}>Logout</button>
     </div>
   )
 }
