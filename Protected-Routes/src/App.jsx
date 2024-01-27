@@ -28,16 +28,17 @@ function App() {
           <Route element={<ProtectedRoute isAuthenticated={isAuthenticated}/>}>
             <Route path='/admin/profile' element={<data.Profile/>}></Route>
             <Route path='/myorders' element={<data.Myorders/>}/>
+            <Route path='/myblogs' element={<data.Myblogs/>}/>
           </Route>
 
           <Route path='/dashboard' element={<data.Dashboard/>}/>
           <Route path='/login' element={<data.Login/>}/>
           <Route path='/logout' element={<data.Logout/>}/>
-          <Route path='/myblogs' element={
+          {/* <Route path='/myblogs' element={
             <ProtectedRoute isAuthenticated={isAuthenticated}>
               <data.Myblogs/>
             </ProtectedRoute>
-          }/>
+          }/> */}
           
         </Routes>
       </Router>
